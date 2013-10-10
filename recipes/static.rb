@@ -7,8 +7,8 @@ say_wizard "You are using Rails version #{Rails::VERSION::STRING}."
 
 
 repo = 'https://raw.github.com/cenglert/application_builds/master/'
-route_text = '\n match "action" => "static#action"\n'
-insert_into_file 'config/routes.rb', route_text, :before => "\nend"
+
+insert_into_file 'config/routes.rb', "\n  match ':action' => 'static#:action'", :before => "\nend"
 
 __END__
 
