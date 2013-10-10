@@ -31,6 +31,11 @@ copy_from_repo 'db/seeds/Countries.csv', :repo => repo
 copy_from_repo 'db/seeds/Regions.csv', :repo => repo
 
 
+if prefer :authentication == 'devise'
+  say_wizard "We're going to tweak your user to have address fields"
+  
+end
+
 __END__
 
 name: address

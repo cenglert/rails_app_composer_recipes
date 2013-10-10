@@ -9,7 +9,7 @@ say_wizard "You are using Rails version #{Rails::VERSION::STRING}."
 repo = 'https://raw.github.com/cenglert/application_builds/master/'
 
 insert_into_file 'config/routes.rb', "\n  match ':action' => 'static#:action'", :before => "\nend"
-copy_from_repo 'app/views/static',:repo => repo
+copy_from_repo 'app/views/static/',:repo => repo
 __END__
 
 name: static
