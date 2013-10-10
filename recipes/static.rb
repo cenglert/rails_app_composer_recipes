@@ -1,4 +1,9 @@
+## Ruby on Rails
 
+HOST_OS = RbConfig::CONFIG['host_os']
+say_wizard "Your operating system is #{HOST_OS}."
+say_wizard "You are using Ruby version #{RUBY_VERSION}."
+say_wizard "You are using Rails version #{Rails::VERSION::STRING}."
 
 
 repo = 'https://raw.github.com/cenglert/application_builds/master/'
